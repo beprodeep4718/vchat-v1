@@ -8,7 +8,7 @@ export const useSocket = () => {
 };
 
 export const SocketProvider = ({ children }) => {
-  const socket = useMemo(() => io("172.16.104.10:3000"), []);
+  const socket = useMemo(() => io("https://vchat-v1.onrender.com"), []);
 
   return (
     <SocketContext.Provider value={socket}>{children}</SocketContext.Provider>
